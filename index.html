@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title> Zadania od 14 do 23 </title>
+
+    <script>
+        function zadanie14a() {
+            var bok_B_pol = prompt("Podaj Bok B: ", "");
+            var bok_C_pol = prompt("Podaj Bok C: ", "");
+            var bok_B_pol = parseFloat(bok_B_pol);
+            var bok_C_pol = parseFloat(bok_C_pol);
+
+            var bok_A_pol = Math.sqrt((bok_C_pol * bok_C_pol) - (bok_B_pol * bok_B_pol));
+
+            document.write("<h1 style=\"color: green; font - size: 31px\"> SIN a: " + (bok_A_pol / bok_C_pol).toFixed(2) + " </h1>");
+            document.write("<h1 style=\"color: green; font - size: 31px\"> COS a: " + (bok_B_pol / bok_C_pol).toFixed(2) + " </h1>");
+            document.write("<h1 style=\"color: green; font - size: 31px\"> TX a: " + (bok_A_pol / bok_B_pol).toFixed(2) + " </h1>");
+            document.write("<h1 style=\"color: green; font - size: 31px\"> CTQ a: " + (bok_B_pol / bok_A_pol).toFixed(2) + " </h1>");
+        }
+
+        function zadanie15() {
+            var x1_pol = parseFloat(prompt("Podaj x1: ", ""));
+            var x2_pol = parseFloat(prompt("Podaj x2: ", ""));
+            rad = (x1_pol * Math.PI) / 180;
+
+            document.write("x1: " + x1_pol + "&nbsp&nbsp&nbsp&nbsp&nbspx2: " + x2_pol + "<br />" + rad);
+        }
+        
+        function zadanie17() {
+            var a = parseFloat(prompt("a=", ""));
+            var b = parseFloat(prompt("b=", ""));
+
+            function suma_pol(a, b) {
+                return a + b;
+            }
+
+            function odejmowanie_pol(a, b) {
+                return a - b;
+            }
+
+            function mnozenie_pol(a, b) {
+                return a * b;
+            }
+
+            function od_kwadratu_pol(a, b) {
+                return (a * a) + " " + b * b;
+            }
+
+            function reszta_z_dzielenia_a_przez_b_pol(a, b) {
+                return a % b;
+            }
+
+            document.write("suma=" + suma_pol(a, b) + "<br>");
+            document.write("odejmowanie=" + odejmowanie_pol(a, b) + "<br>");
+            document.write("mnozenie=" + mnozenie_pol(a, b) + "<br>");
+            document.write("od kwadratu=" + od_kwadratu_pol(a, b) + "<br>");
+            document.write("resdzta z dzielenia=" + reszta_z_dzielenia_a_przez_b_pol(a, b) + "<br>");
+        }
+
+        function zadanie21() {
+            var wysokosc_oparcia = parseFloat(prompt("Wysokość oparcia drabiny: ", ""));
+            var odleglosc_oparcia = parseFloat(prompt("Odległość oparcia drabiny: ", ""));
+            var dlugosc_drabiny = Math.sqrt(Math.pow(wysokosc_oparcia, 2) + Math.pow(odleglosc_oparcia, 2));
+            document.write("Dlugosc drabiny: " + dlugosc_drabiny.toFixed(2));
+            document.write("Kat: " + (Math.atan(odleglosc_oparcia / dlugosc_drabiny) * (180 / Math.PI)).toFixed(2));
+        }
+
+        function zadanie21a() {
+            var bok_A_pol = parseFloat(prompt("Podaj dowolny bok: ", ""));
+            var bok_C_pol = parseFloat(prompt("Podaj przeciwprostokatna: ", ""));
+            var bok_B_pol = Math.sqrt((bok_C_pol * bok_C_pol) - (bok_A_pol * bok_A_pol));
+
+            var pole_pol = (bok_A_pol * bok_B_pol) / 2;
+            var wysokosc_1_pol = bok_A_pol;
+            var wysokosc_2_pol = bok_B_pol;
+            var wysokosc_3_pol = (bok_A_pol * bok_B_pol) / bok_C_pol;
+
+            var sin_alfa_pol = bok_A_pol / bok_C_pol;
+            var cos_alfa_pol = bok_B_pol / bok_C_pol;
+            var tg_alfa_pol = bok_A_pol / bok_B_pol;
+            var ctg_alfa_pol = bok_B_pol / bok_A_pol;
+
+            var kat_gamma_pol = 90;
+            var kat_alfa_pol = Math.asin(bok_A_pol / bok_C_pol) * (180 / Math.PI);
+            var kat_beta_pol = kat_gamma_pol - kat_alfa_pol;
+
+            document.write("<h1 style=\"color:red; font-size: 100px;\">");
+
+            document.write("Bok A: " + bok_A_pol.toFixed(3) + " cm<br />");
+            document.write("Bok B: " + bok_B_pol.toFixed(3) + " cm<br />");
+            document.write("Bok C: " + bok_C_pol.toFixed(3) + " cm<br />");
+            document.write("Pole: " + pole_pol.toFixed(3) + " cm^2<br /> <br />");
+
+            document.write("Wysokosc 1: " + wysokosc_1_pol.toFixed(3) + " cm<br />");
+            document.write("Wysokosc 2: " + wysokosc_2_pol.toFixed(3) + " cm<br />");
+            document.write("Wysokosc 3: " + wysokosc_3_pol.toFixed(3) + " cm<br /> <br />");
+
+            document.write("Sin <i><b> Alfa </b></i>: " + sin_alfa_pol.toFixed(3) + "<br />");
+            document.write("Cos <i><b> Alfa </b></i>: " + cos_alfa_pol.toFixed(3) + "<br />");
+            document.write("Tg <i><b> Alfa </b></i>: " + tg_alfa_pol.toFixed(3) + "<br />");
+            document.write("Ctg <i><b> Alfa </b></i>: " + ctg_alfa_pol.toFixed(3) + "<br /> <br />");
+
+            document.write("Kat <i><b> Alfa </b></i>: " + kat_alfa_pol.toFixed(3) + "° <br />");
+            document.write("Kat <i><b> Beta </b></i>: " + kat_beta_pol.toFixed(3) + "° <br />");
+            document.write("Kat <i><b> Gamma </b></i>: " + kat_gamma_pol.toFixed(3) + "° <br />");
+            document.write("</h1>");
+        }
+    </script>
+
+</head>
+<body>
+    <div id="nazwisko">Kamil Polit</div>
+    <div id="content">
+        <a onclick="zadanie14a()" href="#">Zadanie 14a</a>
+        <a onclick="zadanie15()" href="#">Zadanie 15</a><!-- TODO: -->
+        <a href="src/zadanie16.html">Zadanie 16</a>
+        <a onclick="zadanie17()" href="#">Zadanie 17</a>
+        <a href="src/zadanie18.html">Zadanie 18</a>
+        <a href="src/zadanie19.html">Zadanie 19</a> <!-- FIXME: -->
+        <a onclick="zadanie21()" href="#">Zadanie 21</a>
+        <a onclick="zadanie21a()" href="#">Zadanie 21a</a>
+        <a href="#">Zadanie 23</a><!-- TODO: -->
+
+        <br /> <br /> <br /> <h3><i style="font-weight: lighter; color: #c4c4c4;"> Kody</i> </h3>
+        <a href="src/zadanie14a_kod.html">Zadanie 14a</a>
+        <a href="src/zadanie15_kod.html">Zadanie 17</a>
+        <a href="src/zadanie17_kod.html">Zadanie 17</a>
+        <a href="src/zadanie21_kod.html">Zadanie 21</a>
+        <a href="src/zadanie23_kod.html">Zadanie 23</a>
+    </div>
+</body>
+</html>

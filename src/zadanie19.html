@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> Przykład obliczenia V i Pc walca </title>
+        <script language="JavaScript">
+            function Obwod_pol(a_pol, b_pol) {
+				var obwod_pol = 2 * a_pol + 2 * b_pol;
+				document.getElementByName('obwod').value = obwod_pol.toFixed(2);
+            }
+
+            function Pole_pol(a_pol, b_pol) {
+                var pole_pol = a_pol * b_pol;
+				document.getElementByName('pole').value = pole_pol.toFixed(2);
+            }
+        </script>
+    </head>
+    <body> Pobliczanie V i Pc walca <br>
+        <br>
+        <form name="formularz" onsubmit="Obwod_pol(this.bok_a.value,this.bok_b.value);
+								 		 Pole_pol(this.bok_a.value,this.bok_b.value);return false;">
+		Bok A = <input size="6" name="bok_a"> Bok B = <input size="6" name="bok_b">
+            <br>
+            <br>
+            <input TYPE="submit" Value="oblicz">
+            <br>
+            <br> Bok A = <input size="6" name="obj"> Bok B = <input size="6" name="pole">
+        </form>
+        <table>
+            <tr id="obwod"></tr>
+            <tr id="pole"></tr>
+        </table>
+    </body>
+</html>

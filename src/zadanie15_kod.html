@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<!-- TITLE -->
+	<title> Kod </title>
+	<meta charset="UTF-8" /><link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body> <textarea rows="35" cols="100">
+
+function zadanie21() {
+    var wysokosc_oparcia = parseFloat(prompt("Wysokość oparcia drabiny: ", ""));
+    var odleglosc_oparcia = parseFloat(prompt("Odległość oparcia drabiny: ", ""));
+    var dlugosc_drabiny = Math.sqrt(Math.pow(wysokosc_oparcia, 2) + Math.pow(odleglosc_oparcia, 2));
+    document.write("Dlugosc drabiny: " + dlugosc_drabiny.toFixed(2));
+    document.write("Kat: " + (Math.atan(odleglosc_oparcia / dlugosc_drabiny) * (180 / Math.PI)).toFixed(2));
+}
+
+</textarea><br />
+<a href="../index.html">Powrot</a>
+</body>
+</html>
