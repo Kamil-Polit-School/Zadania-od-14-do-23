@@ -21,14 +21,6 @@
             document.write("<h1 style=\"color: green; font - size: 31px\"> TX a: " + (bok_A_pol / bok_B_pol).toFixed(2) + " </h1>");
             document.write("<h1 style=\"color: green; font - size: 31px\"> CTQ a: " + (bok_B_pol / bok_A_pol).toFixed(2) + " </h1>");
         }
-
-        function zadanie15() {
-            var x1_pol = parseFloat(prompt("Podaj x1: ", ""));
-            var x2_pol = parseFloat(prompt("Podaj x2: ", ""));
-            rad = (x1_pol * Math.PI) / 180;
-
-            document.write("x1: " + x1_pol + "&nbsp&nbsp&nbsp&nbsp&nbspx2: " + x2_pol + "<br />" + rad);
-        }
         
         function zadanie17() {
             var a = parseFloat(prompt("a=", ""));
@@ -116,21 +108,17 @@
     <div id="nazwisko">Kamil Polit</div>
     <div id="content">
         <a onclick="zadanie14a()" href="#">Zadanie 14a</a>
-        <a onclick="zadanie15()" href="#">Zadanie 15</a><!-- TODO: -->
         <a href="src/zadanie16.html">Zadanie 16</a>
         <a onclick="zadanie17()" href="#">Zadanie 17</a>
         <a href="src/zadanie18.html">Zadanie 18</a>
-        <a href="src/zadanie19.html">Zadanie 19</a> <!-- FIXME: -->
+        <a href="src/zadanie19.html">Zadanie 19</a>
         <a onclick="zadanie21()" href="#">Zadanie 21</a>
         <a onclick="zadanie21a()" href="#">Zadanie 21a</a>
-        <a href="#">Zadanie 23</a><!-- TODO: -->
 
         <br /> <br /> <br /> <h3><i style="font-weight: lighter; color: #c4c4c4;"> Kody</i> </h3>
         <a href="src/zadanie14a_kod.html">Zadanie 14a</a>
-        <a href="src/zadanie15_kod.html">Zadanie 17</a>
         <a href="src/zadanie17_kod.html">Zadanie 17</a>
         <a href="src/zadanie21_kod.html">Zadanie 21</a>
-        <a href="src/zadanie23_kod.html">Zadanie 23</a>
     </div>
 </body>
 </html>
